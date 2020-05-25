@@ -44,7 +44,7 @@ Route::get('/', function(Request $request){
                     return 'Argumentos insuficientes para gravar os dados (SET).';
                 endif;
                 Redis::set("{$arr[1]}", "$arr[2]");
-                return 'Registro salvo com sucesso: ' . Redis::get("{$arr[1]}");
+                return 'OK: ' . Redis::get("{$arr[1]}");
             break;
             case 'GET':
                 if(count($arr) < 2):
@@ -57,7 +57,7 @@ Route::get('/', function(Request $request){
                     return 'Argumentos insuficientes para excluir os dados (DEL).';
                 endif;
                 Redis::del("{$arr[1]}");
-                return 'Registro excluído com sucesso.';
+                return 'OK';
             break;
             case 'DBSIZE':
                 return Redis::dbsize();
