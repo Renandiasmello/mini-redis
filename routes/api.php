@@ -21,13 +21,13 @@ Route::get('/', function(Request $request){
         $arr = array_filter($arr, 'strlen');
         
         if(isset($arr[1])){
-            if(!preg_match("(^[A-Za-z][A-Za-z0-9_]{1,99}$)", $arr[1] ) ) {
+            if(!preg_match("(^[A-Za-z][A-Za-z0-9-_]{1,99}$)", $arr[1] ) ) {
                 return 'Chave inválida';
             }
         }
          
         if(isset($arr[2])){
-            if(!preg_match("(^[A-Za-z][A-Za-z0-9_]{1,99}$)", $arr[2] ) ) {
+            if(!preg_match("(^[A-Za-z][A-Za-z0-9-_]{1,99}$)", $arr[2] ) ) {
                 return 'Valor inválido';
             }
         }
