@@ -16,7 +16,7 @@ Para executar a aplicação, você precisa:
  - Url principal http://127.0.0.1:8080/api
  - Exemplo de aplicação do comando SET: http://127.0.0.1:8080/api?cmd=SET mykey cool-value
  - Exemplo de aplicação do comando GET: http://127.0.0.1:8080/api?cmd=GET mykey (Retornando "cool-value")
- - Utilizado e testado através da url do brownser
+ - Utilizado e testado através da Postman(GET) e url do brownser também pode ser usada.
 
 Aplicado os comandos solicitados:
  1. SET key value
